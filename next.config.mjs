@@ -3,8 +3,3 @@
  * For license. See license.txt
 */
 
-
-export const i18nConfig = {
-  locales: ['en', 'ar'],
-  defaultLocale: 'en'
-};
