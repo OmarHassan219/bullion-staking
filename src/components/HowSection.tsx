@@ -15,14 +15,14 @@ export const HowSection = () => {
       <Flexbox
         direction="col"
         alignItems="center"
-        className="gap-[26px] container px-4"
+        className="gap-[26px] container"
       >
         <h1 className="capitalize font-semibold text-3xl sm:text-4xl md:text-[42px] leading-[59px] text-[#1A1A1A] ">
           how it works
         </h1>
         <Grid
-          gap="5"
-          className="md:grid-cols-2 lg:grid-cols-3 md:gap-8 lg:gap-20"
+          gap="6"
+          className="md:grid-cols-2 lg:grid-cols-3 gap-6 md:gap-8 lg:gap-20"
         >
           <div className="rounded-[20px] text-[#454545] bg-white py-9 px-6 ">
             <h2 className="capitalize  md: lg:text-[28px] leading-[42px] mb-[37px] font-semibold ">

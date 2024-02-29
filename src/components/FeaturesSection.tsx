@@ -30,7 +30,7 @@ export const FeaturesSection = () => {
         className="md:grid-cols-2 md:gap-[87px] gap-9 items-center "
       >
         <ThreeFeatures/>
-        <div className="">
+        <div className="mx-auto max-w-full">
           <Image
             alt="wallet"
             loading="lazy"

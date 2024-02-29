@@ -19,8 +19,8 @@ export const ThreeFeatures = () => {
         <p className="text-lg font-semibold text-primary group-hover:text-white duration-300">
           01
         </p>
-        <p className="font-semibold text-[32px]">Security:</p>
-        <p className="text-lg">
+        <p className="font-semibold  text-xl sm:text-[32px]">Security:</p>
+        <p className="text-sm sm:text-lg ">
           Our cutting-edge facilities in Dubai ensure the utmost security for
           your precious investments.
         </p>
@@ -32,7 +32,7 @@ export const ThreeFeatures = () => {
         <Flexbox direction="col" className="border-b group-hover:border-transparent  border-black pb-6">
 
         <p className="text-lg font-semibold text-primary group-hover:text-white duration-300">02</p>
-        <p className="font-semibold text-[32px]">Transparency:</p>
+        <p className="font-semibold text-xl sm:text-[32px]">Transparency:</p>
         </Flexbox>
 
       </div>
@@ -42,7 +42,7 @@ export const ThreeFeatures = () => {
                 <Flexbox direction="col" className="border-b group-hover:border-transparent border-black pb-6">
 
         <p className="text-lg font-semibold text-primary group-hover:text-white duration-300">03</p>
-        <p className="font-semibold text-[32px]">Expertise:</p>
+        <p className="font-semibold text-xl sm:text-[32px]">Expertise:</p>
       </Flexbox>
       </div>
     </Flexbox>

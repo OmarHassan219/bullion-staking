@@ -1,0 +1,16 @@
+{
+    "Header": {
+        "about": "About Us",
+        "contact": "Contact Us",
+        "login": "login"
+
+    },
+    "Hero": {
+        "header": "Financial Empowerment",
+        "of": "Of",
+        "Gold": "Choose a place where your savings transform into gold,",
+        "desc": "blending modern finance with timeless value.",
+        "know more": "know more"
+
+    }
+  }

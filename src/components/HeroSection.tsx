@@ -7,10 +7,13 @@
 
 import React from "react";
 
+import { useTranslations } from "next-intl";
+
 import { Flexbox } from "./layout";
 
 
 export const HeroSection = () => {
+const t = useTranslations('Hero');
   return (
     <div className="bg-[url('/Hero.png')] bg-auto  h-[734px]">
       <Flexbox direction="col" justify="center" className=" text-white gap-[30px] p-4 xl:ml-[137px] h-full">
@@ -24,7 +27,7 @@ export const HeroSection = () => {
             <br /> blending modern finance with timeless value.
           </p>
         </Flexbox>
-        <button className="font-medium text-xs w-fit sm:text-sm md:text-xl sm:px-5 py-[7px]  bg-primary text-white px-3 rounded-full border border-transparent focus:shadow-none duration-300 hover:border-primary hover:bg-transparent hover:text-primary " type="button">Know more</button>
+        <button className="font-medium text-xs w-fit sm:text-sm md:text-xl sm:px-5 py-[7px]  bg-primary text-white px-3 rounded-full border border-transparent focus:shadow-none duration-300 hover:border-primary hover:bg-transparent hover:text-primary " type="button">{t('about')}</button>
       </Flexbox>
     </div>
   );

@@ -3,34 +3,8 @@
  * For license. See license.txt
 */
 
+import { redirect } from "next/navigation";
 
-
-import {
-  AboutUs,
-  BenefitsSection,
-  CusDetailsSection,
-  FeaturesSection,
-  HeroSection,
-  HowSection,
-  ImgSection,
-  SliderSection,
-  WhyBullionSection,
-} from "@/components";
-import SubscribecSec from "@/components/SubscribecSec";
-
-export default function Home() {
-  return (
-    <main>
-      <HeroSection />
-      <CusDetailsSection />
-      <BenefitsSection />
-      <WhyBullionSection />
-      <FeaturesSection />
-      <AboutUs />
-      <SliderSection />
-      <ImgSection />
-      <HowSection/>
-      <SubscribecSec/>
-    </main>
-  );
+export default function RootPage() {
+redirect('/en')
 }

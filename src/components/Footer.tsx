@@ -16,7 +16,7 @@ export const Footer = () => {
   return (
     <footer className="bg-black pt-[75px] pb-[34px]">
         <div className='container px-4'>
-<Flexbox direction='col' justify='between' alignItems='center' className='md:flex-row w-full justify-between'>
+<Flexbox direction='col' justify='between' alignItems='center' className='md:flex-row gap-5 md:gap-0 w-full justify-between'>
 <Link href="#home" >
         <Image
           alt="Bullion staking"
@@ -24,11 +24,12 @@ export const Footer = () => {
           width={178}
           height={75}
           src="/footerlogo.svg"
+          className='max-w-full'
         />
       </Link>
 
-<div>
-<ul className='flex items-center gap-[25px] text-[#E4E4E4] text-lg '>
+<Flexbox alignItems='center' direction='col' className='justify-center md:justify-start '>
+<ul className='flex flex-wrap items-center justify-center gap-[25px] text-[#E4E4E4]  text-xs xs:text-sm md:text-md lg:text-lg '>
 <li>
     <Link  className='hover:text-primary transition-all duration-300' href='#about'>About</Link>
 </li>
@@ -77,13 +78,13 @@ export const Footer = () => {
     </a>
 </li>
 </ul>
-</div>
+</Flexbox>
 
 
 
 
 </Flexbox>
-<p className={`mt-[75px] text-xl text-[#A1A1A1] ${PPTelegraph.className}`}>© 2024 bullion staking all right reserved</p>
+<p className={`mt-[75px] text-sm sm:text-xl text-center md:text-start text-[#A1A1A1] ${PPTelegraph.className}`}>© 2024 bullion staking all right reserved</p>
         </div>
     </footer>
   )

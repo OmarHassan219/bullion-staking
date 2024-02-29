@@ -11,15 +11,16 @@ import Image from "next/image";
 
 export const ImgSection = () => {
   return (
-    <div className="w-full max-w-full h-[246px]">
+    <div className="h-48 sm:h-60 flex items-center relative">
+
       <Image
         alt="squares"
         loading="lazy"
         height={246}
         width={1440}
         src="/shining.png"
-        className="w-full"
-      />
+        className="w-full h-full object-cover"
+        />
     </div>
   );
 };
