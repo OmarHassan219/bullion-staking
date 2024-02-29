@@ -2,32 +2,45 @@
 @tailwind components;
 @tailwind utilities;
 
-:root {
-  --foreground-rgb: 0, 0, 0;
-  --background-start-rgb: 214, 219, 220;
-  --background-end-rgb: 255, 255, 255;
+*,
+*::after,
+*::before {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  -ms-box-sizing: border-box;
 }
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    --foreground-rgb: 255, 255, 255;
-    --background-start-rgb: 0, 0, 0;
-    --background-end-rgb: 0, 0, 0;
-  }
+::-webkit-scrollbar {
+  height: 0.375rem;
+  width: 0.5rem;
+  border-radius: 10px;
 }
 
-body {
-  color: rgb(var(--foreground-rgb));
-  background: linear-gradient(
-      to bottom,
-      transparent,
-      rgb(var(--background-end-rgb))
-    )
-    rgb(var(--background-start-rgb));
+/* Track */
+::-webkit-scrollbar-track {
+  background-color: rgb(255 255 255/1);
 }
 
-@layer utilities {
-  .text-balance {
-    text-wrap: balance;
-  }
+/* Handle */
+::-webkit-scrollbar-thumb {
+  border-radius: 10px;
+  background-color: rgb(208 165 90/1);
+}
+::-moz-scrollbar-thumb {
+  cursor: pointer;
+}
+
+.slick-track {
+  display: flex !important;
+}
+
+.slick-slide {
+  min-height: 424px !important;
+  height: inherit !important;
+}
+.slick-slide > div {
+  height: 100% !important;
 }

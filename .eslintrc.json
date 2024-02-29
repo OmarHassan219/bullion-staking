@@ -1,3 +1,92 @@
 {
-  "extends": "next/core-web-vitals"
+  "root": true,
+  "env": {
+    "browser": true,
+    "es2020": true
+  },
+  "extends": [
+    "eslint:recommended",
+    "plugin:@typescript-eslint/recommended",
+    "plugin:react-hooks/recommended",
+    "plugin:@next/next/recommended"
+  ],
+  "ignorePatterns": ["dist", ".eslintrc.cjs"],
+  "parserOptions": {
+    "parser": "@typescript-eslint/parser",
+    "project": ["./tsconfig.json"],
+    "ecmaVersion": "latest",
+    "warnOnUnsupportedTypeScriptVersion": false
+  },
+  "plugins": ["simple-import-sort", "header"],
+  "rules": {
+    "simple-import-sort/imports": [
+      "error",
+      {
+        "groups": [
+          ["^react"],
+          ["^"],
+          ["^@/hooks"],
+          ["^@/services"],
+          ["^@/components"],
+          ["^@?\\w"],
+          ["^\\."]
+        ]
+      }
+    ],
+    "no-console": "error",
+    "no-implied-eval": "error",
+    "no-empty-function": "error",
+    "no-else-return": "error",
+    "no-await-in-loop": "error",
+    "no-duplicate-case": "error",
+    "no-inner-declarations": "error",
+    "valid-jsdoc": "warn",
+    "func-style": ["error", "declaration", { "allowArrowFunctions": true }],
+    "max-lines": ["error", 140],
+    "no-trailing-spaces": "error",
+    "capitalized-comments": ["error", "always"],
+    "require-await": "error",
+    "@typescript-eslint/no-unnecessary-condition": "error",
+    "@typescript-eslint/no-floating-promises": "error",
+    "no-shadow": "off",
+    "@typescript-eslint/no-shadow": "error",
+    "max-params": "error",
+    "no-nested-ternary": "error",
+    "header/header": [
+      "error",
+      "block",
+      [
+        "",
+        " * Copyright (c) 2024, Bullion-Staking  All rights reserved.",
+        " * For license. See license.txt",
+        ""
+      ],
+      2
+    ],
+    "@typescript-eslint/naming-convention": [
+      "error",
+      { "selector": "variable", "format": ["camelCase", "PascalCase"] },
+      {
+        "selector": "function",
+        "format": ["camelCase", "PascalCase"],
+        "filter": { "regex": "^App$", "match": false }
+      },
+      { "selector": "interface", "format": ["PascalCase"] },
+      { "selector": "typeAlias", "format": ["PascalCase"] },
+      {
+        "selector": "variable",
+        "types": ["boolean"],
+        "format": ["camelCase", "PascalCase"],
+        "prefix": ["is", "has", "can", "should", "did", "will"]
+      }
+    ],
+    "no-unused-vars": [
+      "error",
+      { "varsIgnorePattern": "^_", "argsIgnorePattern": "^_" }
+    ],
+    "no-warning-comments": [
+      "error",
+      { "terms": ["todo", "fixme"], "location": "anywhere" }
+    ]
+  }
 }

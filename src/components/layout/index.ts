@@ -3,8 +3,5 @@
  * For license. See license.txt
 */
 
-
-export const i18nConfig = {
-  locales: ['en', 'ar'],
-  defaultLocale: 'en'
-};
+export { Flexbox } from './Flexbox';
+export { Grid } from './Grid';
