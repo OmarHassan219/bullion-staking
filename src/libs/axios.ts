@@ -5,7 +5,7 @@
 
 import axios from 'axios'
 
-const baseURL = 'https://node-server.afkkarr.com/v1/'
+const baseURL = 'https://api.bullionstaking.com/v1/'
 // 'https://node-server.afkkarr.com/v1/'
 
 export const axiosInstance = axios.create({
