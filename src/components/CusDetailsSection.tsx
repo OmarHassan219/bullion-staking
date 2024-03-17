@@ -8,6 +8,9 @@
 "use client";
 import React from "react";
 
+import { apiPaths } from "@/constants/apiPaths";
+import { axiosInstance } from "@/libs/axios";
+
 import Image from "next/image";
 
 import { CusDetailsForm } from ".";
@@ -15,10 +18,20 @@ import { Flexbox, Grid } from "./layout";
 
 
 export const CusDetailsSection = () => {
-  const handleSubmit = (data: unknown) => {
+  const handleSubmit = async(data: unknown) => {
     // Handle form submission logic here
     // eslint-disable-next-line no-console
     console.log(data);
+    try{
+
+
+      const response = await axiosInstance.post(apiPaths.register, data);
+      alert(response);
+    } catch(error){
+      alert(error);
+    }
+
+
   };
   return (
     <section className="py-[39px] px-4">
